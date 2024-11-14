@@ -1,20 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markica</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+    <title>markica</title>
 </head>
 <body>
-<script>
-    fetch('main.html')
-        .then(response => response.text())
-        .then(data => {
-            document.body.innerHTML = data;
-        })
-        .catch(error => {
-            console.error('Error loading main.html:', error);
+<div class="container">
+  <header>
+    <a class="email" href="#" onclick="copyEmail()">
+      <img src="assets/email.png" alt="EM">
+    </a>
+
+    <div id="copyPopup" class="copy-popup">Email copied to clipboard!</div>
+
+    <script>
+      function copyEmail() {
+        const email = "youremail@example.com";
+        navigator.clipboard.writeText(email).then(() => {
+          showPopup();
+        }).catch(err => {
+          console.error("Could not copy email: ", err);
         });
-</script>
+      }
+
+      function showPopup() {
+        const popup = document.getElementById("copyPopup");
+        popup.classList.add("show");
+        setTimeout(() => popup.classList.remove("show"), 2000);
+      }
+    </script>
+    <a class="github" href="https://github.com/zoviadvokata"><img src="assets/github.png" alt="GH"></a>
+    <a class="themeswitch" href="#" onclick="toggleTheme()">
+      <img id="themeImage" src="assets/sun.svg">
+    </a>
+
+    <script>
+      function toggleTheme() {
+        // Toggle the light-theme class on the body
+        document.body.classList.toggle("light-theme");
+
+        // Get the image element for theme toggle
+        const themeImage = document.getElementById("themeImage");
+
+        // Check if the light-theme class is added
+        const isLightTheme = document.body.classList.contains("light-theme");
+
+        // Change the image source based on the theme
+        themeImage.src = isLightTheme ? "assets/moon.svg" : "assets/sun.svg";
+      }
+    </script>
+
+
+  </header>
+<div class="textcontainer">
+  <div class="bigtext">Hi, I'm <span class="highlight1">Mihajlo</span>,</div>
+  <div class="bigtext">Welcome To My <div class="highlight2">Webpage</div>.</div>
+</div>
+  <div class="seperator"></div>
+
+  <div class="fieldscontainer">
+  <div class="projectsfullcontainer">
+  <p class="containerstitle"><img src="assets/bulb.svg" alt="">PROJECTS AND PRIOR EXPERIENCE</p>
+  <div class="projectscontainer">
+      <div class="projectstitle"><img src="assets/v6radio.png" alt="V6">V6Radio
+        <div class="projectsdate">
+        Late 2024 - Now</div>
+      </div>
+      <div class="projectsdescription">A radio where users can upload their own songs to be played by our player.</div>
+    <div class="projectsfooter">
+      <div class="projectsfooterelements"><img src="assets/user.svg" alt="">Front-End Developer</div>
+      <div class="projectsfooterelements"><img src="assets/flag.svg" alt="">Radio Player</div>
+      <div class="projectsfooterelements"><img src="assets/code.svg" alt="">Proprietary</div>
+      <a href="https://v6radio.com/" class="projectsfooterelements"><img src="assets/vw.svg" alt="">Visit Website<img class="visitwebsite" src="assets/redirect.svg"></a>
+    </div>
+  </div>
+
+  <div class="projectscontainersigma">
+      <div class="projectstitle"><img src="assets/sigma.png" alt="SG">Sigma App
+        <div class="projectsdate">
+          Early 2024 - Now</div>
+      </div>
+      <div class="projectsdescription">Calorie tracking app made to help people with weight problems get leaner and healthier easier by using my app.</div>
+    <div class="projectsfooter">
+      <div class="projectsfooterelements"><img src="assets/user.svg" alt="">Co-Founder & Front-End Developer</div>
+      <div class="projectsfooterelements"><img src="assets/flag.svg" alt="">Mobile App</div>
+      <div class="projectsfooterelements"><img src="assets/code.svg" alt="">Proprietary</div>
+      <a href="" class="projectsfooterelements"><img src="assets/vw.svg" alt="">Visit Website<img class="visitwebsite" src="assets/redirect.svg"></a>
+    </div>
+  </div>
+  </div>
+
+  <div class="toolsfullcontainer">
+  <p class="containerstitle"><img src="assets/tools.svg" alt="">TOOLS AND TECHNOLOGIES IN MY ARSENAL</p>
+  <div class="toolscontainer">
+    <div class="itemcontainer">
+    <p class="subtitle">PROGRAMMING LANGUAGES</p>
+    <div class="item"><img src="assets/c.svg" alt="">C</div>
+    <div class="item"><img src="assets/javascript.svg" alt="">JavaScript</div>
+    <div class="item"><img src="assets/typescript.svg" alt="">TypeScript</div>
+    <div class="item"><img src="assets/python.svg" alt="">Python</div>
+    </div>
+
+    <div class="seperator2"></div>
+
+    <div class="itemcontainer">
+    <p class="subtitle">LIBRARIES & FRAMEWORKS</p>
+    <div class="item"><img src="assets/angular.svg" alt="">Angular</div>
+    <div class="item"><img src=assets/tailwindcss.svg alt="">Tailwind CSS</div>
+    <div class="item"><img src="assets/scss.svg" alt="">SASS/SCSS</div>
+      <div class="item"><img src="assets/primeng.svg" alt="">PrimeNG</div>
+    </div>
+
+    <div class="seperator3"></div>
+
+    <div class="itemcontainer">
+      <p class="subtitle">DATABASES & OTHER TOOLS</p>
+      <div class="item"><img src="assets/mongodb.svg" alt="">MongoDB</div>
+      <div class="item"><img src=assets/mysql.svg alt="">MySQL</div>
+      <div class="item"><img src="assets/git.svg" alt="">Git</div>
+      <div class="item"><img src="assets/vscode.svg" alt="">VS Code</div>
+      <div class="item"><img src="assets/webstorm.svg" alt="">WebStorm</div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="seperator4"></div>
+  <div class="footer">
+    <div class="ongithub"><img class="code" src="assets/code.svg" alt="">markica.net — Open-source on <a class ="githublink" href="">GitHub</a></div>
+    <div class="builtwith"><img class="html5" src="assets/html.svg" alt="">Built with HTML5</div>
+  </div>
+
+</div>
 </body>
 </html>
