@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>markicanet</title>
+    <title>Markica</title>
 </head>
 <body>
 <script>
-    window.location.replace(window.location.origin + '/main.html');
+    fetch('main.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading main.html:', error);
+        });
 </script>
 </body>
 </html>
