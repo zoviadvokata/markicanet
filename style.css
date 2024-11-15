@@ -23,14 +23,14 @@ header {
     width: 100%;
     margin-top: 6vh;
     display: flex;
-    gap: 10px;
+    gap: 0.9vh;
     align-items: center;
 }
 
 .email {
     position: relative;
-    border-radius: 6px;
-    padding: 5px;
+    border-radius: 0.5vh;
+    padding: 0.45vh;
     background: transparent;
     display: flex;
     align-items: center;
@@ -66,16 +66,16 @@ header {
 .email::after {
     content: "Copy Email";
     position: absolute;
-    bottom: -40px;
+    bottom: -3.75vh;
     left: 50%;
     transform: translateX(-50%) translateY(5px);
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     background-color: #1a1a1a;
     color: #737373;
     font-weight: 500;
-    padding: 7px 8px;
-    border-radius: 7px;
-    font-size: 12px;
+    padding: 0.65vh 0.75vh;
+    border-radius: 0.5vh;
+    font-size: 1.1vh;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
@@ -105,8 +105,8 @@ header {
 
 .github {
     position: relative;
-    border-radius: 6px;
-    padding: 6px;
+    border-radius: 0.5vh;
+    padding: 0.45vh;
     background: transparent;
     display: flex;
     align-items: center;
@@ -127,16 +127,16 @@ header {
 .github::after {
     content: "Go to GitHub";
     position: absolute;
-    bottom: -40px;
+    bottom: -3.75vh;
     left: 50%;
     transform: translateX(-50%) translateY(5px);
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     background-color: #1a1a1a;
     color: #737373;
     font-weight: 500;
-    padding: 7px 8px;
-    border-radius: 7px;
-    font-size: 12px;
+    padding: 0.65vh 0.75vh;
+    border-radius: 0.5vh;
+    font-size: 1.1vh;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
@@ -166,8 +166,8 @@ header {
 
 .themeswitch {
     position: relative;
-    border-radius: 6px;
-    padding: 5px;
+    border-radius: 0.5vh;
+    padding: 0.45vh;
     background: transparent;
     display: flex;
     margin-left: auto;
@@ -188,16 +188,16 @@ header {
 .themeswitch::after {
     content: "Switch Theme";
     position: absolute;
-    bottom: -40px;
+    bottom: -3.75vh;
     left: 50%;
     transform: translateX(-50%) translateY(5px);
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     background-color: #1a1a1a;
     color: #737373;
     font-weight: 500;
-    padding: 7px 8px;
-    border-radius: 7px;
-    font-size: 12px;
+    padding: 0.65vh 0.75vh;
+    border-radius: 0.5vh;
+    font-size: 1.1vh;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
@@ -240,7 +240,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     margin-bottom: 6vh;
 }
 
@@ -271,17 +271,19 @@ header {
 
 .containerstitle img {
     filter: grayscale(100%) brightness(1) contrast(0.3);
+    aspect-ratio: 1/1;
+    width: 2.5vh;
     margin-right: 0.8vh;
 }
 
 .projectscontainersigma {
-    border-radius: 6px;
+    border-radius: 0.5vh;
     max-width: 50vh;
     padding: 1.8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     margin-top: 2vh;
     transition: background-color 0.2s ease;
 }
@@ -296,12 +298,12 @@ header {
 }
 
 .projectscontainer {
-    border-radius: 6px;
+    border-radius: 0.5vh;
     padding: 1.8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     transition: background-color 0.2s ease;
     max-width: 50vh;
 }
@@ -316,14 +318,14 @@ header {
 }
 
 .projectstitle img {
-    border-radius: 5px;
+    border-radius: 0.45vh;
     width: 2.5vh;
     aspect-ratio: 1/1;
 }
 
 .projectstitle {
     display: flex;
-    gap: 10px;
+    gap: 0.9vh;
     align-items: center;
     color: white;
     font-weight: 700;
@@ -393,15 +395,20 @@ a {
     .toolscontainer {
         flex-wrap: wrap;
     }
+
+    .container {
+        padding-left: 2vh;
+        padding-right: 2vh;
+    }
 }
 
 .toolscontainer {
-    border-radius: 6px;
+    border-radius: 0.5vh;
     padding: 1.8vh;
     display: flex;
     gap: 1.5vh;
     justify-content: center;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     max-width: 60vh;
 }
 
@@ -429,18 +436,18 @@ a {
 .subtitle {
     display: flex;
     align-items: center;
-    margin-bottom: 1.4vh;
+    margin-bottom: 0.1vh;
     color: #737373;
     font-size: 1.2vh;
     font-weight: 450;
 }
 
 .item {
-    border-radius: 6px;
+    border-radius: 0.5vh;
     padding: 0.6vh;
     display: flex;
     align-items: center;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     transition: background-color 0.2s ease;
     height: 4vh;
     width: 15vh;
@@ -466,7 +473,7 @@ a {
 
 .item img {
     margin-left: 0.8vh;
-    border-radius: 6px;
+    border-radius: 0.5vh;
     margin-right: 1vh;
     height: 2.5vh;
     aspect-ratio: 1/1;
@@ -476,7 +483,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
 }
 
 @media (max-width: 522px) {
@@ -502,7 +509,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
 }
 
 @media (max-width: 706px) {
@@ -517,7 +524,7 @@ a {
     align-items: center;
     justify-content: center;
     background: #2b2b2b;
-    height: 1px;
+    height: 0.1vh;
 }
 
 .code {
@@ -574,10 +581,10 @@ a {
     top: 5%;
     left: 50%;
     background-color: #1a1a1a;
-    outline: 1px solid #2b2b2b;
+    outline: 0.1vh solid #2b2b2b;
     color: #737373;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 0.45vh;
     font-size: 14px;
     opacity: 0;
     transform: translateY(20px) translateX(-50%);
