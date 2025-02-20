@@ -465,6 +465,10 @@ a {
     background-color: #1a1a1a;
 }
 
+.light-theme .item:hover {
+    background-color: #f0ecec;
+}
+
 .itemcontainer {
     display: flex;
     flex-direction: column;
